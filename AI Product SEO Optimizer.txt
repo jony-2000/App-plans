@@ -1,0 +1,353 @@
+# Shopify App Project: AI Product SEO Optimizer
+
+I want to build a Shopify embedded app using Shopify Remix, React, Polaris, PostgreSQL, and Node.js.
+
+## Goal
+
+Create an AI-powered Shopify app that helps merchants optimize:
+
+* Product Title
+* SEO Title (Meta Title)
+* Meta Description
+
+The app should use AI providers such as:
+
+* OpenAI
+* Claude
+* Gemini
+
+Merchants can choose which provider to use.
+
+---
+
+# Main Problem We Solve
+
+Many Shopify stores have:
+
+* Poor product titles
+* Duplicate titles
+* Generic imported product names
+* Weak SEO metadata
+
+Our app should improve SEO and click-through rates using AI.
+
+---
+
+# Core Features (MVP)
+
+## 1. AI Product Title Generator
+
+Merchant selects products.
+
+App generates:
+
+* Better product title
+* SEO-friendly title
+* Keyword-optimized title
+
+Example:
+
+Before:
+"Wireless Earbuds Bluetooth Headphones TWS"
+
+After:
+"Bluetooth Wireless Earbuds with Noise Cancellation"
+
+---
+
+## 2. AI SEO Title Generator
+
+Generate SEO meta titles.
+
+Requirements:
+
+* Configurable max length
+* SEO keyword inclusion
+* Brand-aware generation
+
+---
+
+## 3. AI Meta Description Generator
+
+Generate optimized meta descriptions.
+
+Requirements:
+
+* Character limit control
+* Keyword inclusion
+* Brand voice support
+
+---
+
+## 4. Bulk Processing
+
+Merchant can:
+
+* Select products manually
+* Filter products
+* Process entire collections
+
+Support:
+
+* 10 products
+* 100 products
+* 1,000+ products
+
+Use background jobs/queues.
+
+---
+
+## 5. Version History System
+
+IMPORTANT:
+
+Never overwrite data permanently.
+
+Create version history.
+
+Database table example:
+
+title_versions
+
+* id
+* shop_id
+* product_id
+* content_type
+* old_value
+* new_value
+* created_at
+
+Supported content types:
+
+* Product Title
+* SEO Title
+* Meta Description
+
+Merchant can restore any previous version.
+
+Store versions indefinitely.
+
+---
+
+## 6. Restore Feature
+
+Merchant can:
+
+* View history
+* Compare old vs new
+* Restore previous version
+
+One-click restore.
+
+---
+
+## 7. AI Settings
+
+Merchant can configure:
+
+AI Provider:
+
+* OpenAI
+* Claude
+* Gemini
+
+Brand Tone:
+
+* Professional
+* Luxury
+* Friendly
+* Technical
+* Custom
+
+Target Market:
+
+* US
+* UK
+* Canada
+* Australia
+* Global
+
+Language:
+
+* English
+* Other languages
+
+---
+
+# Differentiators (Version 2)
+
+## SEO Score Before & After
+
+Display:
+
+Current SEO Score:
+42
+
+AI SEO Score:
+81
+
+Show improvement.
+
+---
+
+## Multiple AI Suggestions
+
+Generate:
+
+Option A (GPT)
+Option B (Claude)
+Option C (Gemini)
+
+Merchant chooses preferred version.
+
+---
+
+## Brand Voice Training
+
+Merchant selects top-performing products.
+
+AI learns:
+
+* Writing style
+* Tone
+* Formatting
+
+Then generates consistent content.
+
+---
+
+## Keyword Suggestions
+
+Suggest:
+
+* Primary keyword
+* Secondary keyword
+* Long-tail keywords
+
+Use these during generation.
+
+---
+
+# Future Features (Version 3)
+
+## A/B Testing
+
+Allow:
+
+Title A
+vs
+Title B
+
+Track:
+
+* Click-through rate
+* Conversion rate
+
+Determine winning title.
+
+---
+
+## Performance Analytics
+
+Track:
+
+* Generated titles
+* Restored titles
+* SEO improvements
+* Product performance changes
+
+Dashboard reports.
+
+---
+
+# Billing
+
+Implement Shopify Billing API.
+
+Plans:
+
+Free
+
+* 100 products/month
+
+Starter
+
+* $9/month
+
+Growth
+
+* $29/month
+
+Pro
+
+* $79/month
+
+Agency
+
+* $199/month
+
+Use credit-based AI consumption tracking.
+
+---
+
+# Technical Requirements
+
+Framework:
+
+* Shopify Remix
+
+Frontend:
+
+* React
+* Polaris
+* App Bridge
+
+Backend:
+
+* Node.js
+
+Database:
+
+* PostgreSQL
+
+ORM:
+
+* Prisma
+
+Queue:
+
+* BullMQ or equivalent
+
+Hosting:
+
+* Railway, Render, or Fly.io
+
+---
+
+# Required Pages
+
+1. Dashboard
+2. Product Optimizer
+3. Bulk Optimizer
+4. Version History
+5. Restore Center
+6. AI Settings
+7. Billing
+8. Analytics
+
+---
+
+# Deliverables
+
+1. Complete database schema
+2. System architecture
+3. Folder structure
+4. Shopify app setup
+5. Prisma schema
+6. API endpoints
+7. Background job architecture
+8. Polaris UI screens
+9. Billing implementation
+10. Step-by-step implementation plan
+
+Generate production-quality code and architecture, not a demo.
