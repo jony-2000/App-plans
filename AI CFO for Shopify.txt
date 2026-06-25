@@ -1,0 +1,772 @@
+AI CFO for Shopify
+Complete Product Requirements Document (PRD)
+
+Version: 1.0
+Product Name: AI CFO
+Category: Shopify Embedded App
+Target Users: Shopify merchants doing $10k-$5M/month revenue
+Primary Goal: Increase merchant profitability through AI-powered recommendations and financial intelligence.
+
+1. PRODUCT OVERVIEW
+Vision
+
+Build the first AI-powered Chief Financial Officer for Shopify merchants.
+
+Instead of showing merchants more analytics dashboards, the app proactively identifies profit leaks, growth opportunities, inventory risks, and operational inefficiencies.
+
+The app should answer:
+
+"What should I do today to increase profit?"
+
+rather than:
+
+"Here are your numbers."
+
+2. CORE VALUE PROPOSITION
+
+Most Shopify analytics tools provide data.
+
+AI CFO provides:
+
+Recommendations
+Explanations
+Predictions
+Profit optimization
+
+Merchant installs app.
+
+Within 60 seconds app should generate:
+
+Profit analysis
+Inventory analysis
+Refund analysis
+Growth opportunities
+Actionable recommendations
+3. TARGET USERS
+Starter
+
+Revenue:
+
+$10k-$50k/month
+
+Needs:
+
+Profit visibility
+Easy reports
+Growth
+
+Revenue:
+
+$50k-$500k/month
+
+Needs:
+
+Margin optimization
+Inventory forecasting
+Marketing profitability
+Scale
+
+Revenue:
+
+$500k-$5M/month
+
+Needs:
+
+Team reporting
+AI forecasting
+Operational efficiency
+4. APPLICATION ARCHITECTURE
+Dashboard
+AI Insights
+Products
+Inventory
+Orders
+Customers
+Marketing
+Reports
+AI Chat
+Settings
+5. USER FLOW
+Installation
+
+Merchant installs app.
+
+↓
+
+OAuth authentication.
+
+↓
+
+Data sync begins.
+
+↓
+
+Show loading screen.
+
+↓
+
+Analyze:
+
+Orders
+Products
+Customers
+Inventory
+
+↓
+
+Generate onboarding report.
+
+↓
+
+Dashboard.
+
+6. DESIGN SYSTEM
+Framework
+
+Shopify Polaris
+
+Design Principles
+Clean
+
+No clutter.
+
+Action Focused
+
+Every page should answer:
+
+What should the merchant do?
+Mobile Friendly
+
+Responsive layout.
+
+Fast
+
+Page load under:
+
+2 seconds
+Colors
+
+Primary
+
+#008060
+
+Success
+
+#22C55E
+
+Warning
+
+#F59E0B
+
+Danger
+
+#EF4444
+
+Background
+
+#F6F6F7
+
+Card
+
+#FFFFFF
+7. SIDEBAR NAVIGATION
+🏠 Dashboard
+
+✨ AI Insights
+
+📦 Products
+
+📊 Inventory
+
+🧾 Orders
+
+👥 Customers
+
+📣 Marketing
+
+📈 Reports
+
+🤖 AI Chat
+
+⚙️ Settings
+8. DASHBOARD PAGE
+Purpose
+
+Provide complete store health overview.
+
+KPI Cards
+Revenue
+Today
+7 Days
+30 Days
+Profit
+Gross Profit
+Net Profit
+Margin
+Percentage
+Orders
+Total Orders
+Refund Rate
+Refund %
+Shipping Cost
+Total Shipping Expense
+Advertising Spend
+Meta
+Google
+TikTok
+Inventory Value
+Current Stock Value
+Store Health Score
+
+Range:
+
+0-100
+
+Calculated using:
+
+Profitability
+Refund Rate
+Inventory Risk
+Ad Efficiency
+Growth Trend
+AI Summary Widget
+
+Example:
+
+Revenue increased 12%
+
+Profit decreased 6%
+
+Reason:
+
+Shipping costs increased.
+
+Recommended Action:
+
+Increase free shipping threshold.
+Alerts Section
+Types
+
+Profit Risk
+
+Inventory Risk
+
+Refund Risk
+
+Marketing Risk
+
+Growth Opportunity
+
+Profit Trend Chart
+
+Filters:
+
+7 Days
+30 Days
+90 Days
+365 Days
+9. AI INSIGHTS PAGE
+Purpose
+
+Main value page.
+
+Opportunity Feed
+
+Each insight contains:
+
+{
+  "title": "",
+  "description": "",
+  "impact": "",
+  "confidence": "",
+  "recommendation": ""
+}
+Example
+Increase Product A price by 5%.
+
+Potential Gain:
+
+$1,200/month
+
+Confidence:
+
+91%
+Categories
+Pricing
+Discounts
+Inventory
+Marketing
+Products
+Customers
+Shipping
+Weekly AI Report
+
+Sections:
+
+What Happened
+Why It Happened
+What To Do Next
+Profit Leak Scanner
+
+Analyze:
+
+Shipping
+Discounts
+Refunds
+Ads
+Bundles
+Products
+
+Output:
+
+Estimated Monthly Leakage
+
+$4,800
+10. PRODUCTS PAGE
+Product Table
+
+Columns
+
+Image
+
+Product Name
+
+Revenue
+
+Profit
+
+Margin %
+
+Units Sold
+
+Refund %
+
+Stock
+Filters
+Low Margin
+
+High Refund
+
+Best Sellers
+
+Losing Money
+
+Out Of Stock
+Product Detail Page
+Metrics
+
+Revenue
+
+Profit
+
+Margin
+
+Units Sold
+
+Refund Rate
+
+Charts
+
+Revenue Trend
+
+Profit Trend
+
+Refund Trend
+
+AI Analysis
+
+Example:
+
+Margin declined from 24% to 15%.
+
+Cause:
+
+Shipping cost increase.
+Recommendations
+Increase price.
+
+Bundle product.
+
+Reduce discount.
+11. INVENTORY PAGE
+Purpose
+
+Prevent stockouts.
+
+Table
+
+Columns
+
+Product
+
+Current Stock
+
+Days Remaining
+
+Forecast Demand
+
+Risk Status
+Risk Status
+Healthy
+
+Low
+
+Critical
+Forecasting
+7 Days
+30 Days
+60 Days
+90 Days
+AI Reorder Engine
+
+Output
+
+Recommended Reorder Quantity
+
+Expected Stockout Date
+12. ORDERS PAGE
+Table
+
+Columns
+
+Order Number
+
+Revenue
+
+Profit
+
+Margin
+
+Status
+Order Details
+Products
+Cost Of Goods
+Shipping Cost
+Transaction Fee
+Tax
+Net Profit
+AI Analysis
+
+Example:
+
+Margin only 4%.
+
+Shipping costs too high.
+13. CUSTOMERS PAGE
+Segments
+VIP
+High Profit
+High Return
+At Risk
+Churn Risk
+Customer Profile
+
+Metrics
+
+Lifetime Revenue
+
+Lifetime Profit
+
+Orders
+
+Returns
+
+Average Order Value
+Predictions
+Churn Probability
+LTV Prediction
+Repeat Purchase Probability
+AI Summary
+
+Example:
+
+Customer returns products frequently.
+
+Return rate:
+
+28%
+14. MARKETING PAGE
+Integrations
+
+Meta
+
+Google Ads
+
+TikTok Ads
+
+Campaign Table
+
+Columns
+
+Campaign
+
+Spend
+
+Revenue
+
+Profit
+
+ROAS
+
+Profit Margin
+AI Analysis
+
+Example
+
+Campaign profitable.
+
+Scale budget by 15%.
+Marketing Opportunities
+Increase Budget
+Decrease Budget
+Pause Campaign
+Product Promotion Suggestions
+15. REPORTS PAGE
+Available Reports
+Profit Report
+Product Report
+Inventory Report
+Marketing Report
+Customer Report
+Refund Report
+Export Formats
+PDF
+
+CSV
+
+Excel
+16. AI CHAT PAGE
+Purpose
+
+Allow merchant to ask business questions.
+
+Example Questions
+Why did profit drop?
+
+Which products lose money?
+
+What should I increase prices on?
+
+How can I gain $5,000 profit?
+Context Sources
+
+AI can access:
+
+Orders
+Products
+Customers
+Marketing
+Inventory
+Reports
+Output Structure
+Answer
+Supporting Metrics
+Recommended Actions
+Expected Impact
+17. SETTINGS PAGE
+Store Settings
+
+Currency
+
+Timezone
+
+Country
+
+Cost Settings
+
+COGS
+
+Packaging Cost
+
+Handling Cost
+
+Warehouse Cost
+
+Shipping Cost Rules
+
+Integrations
+
+Shopify
+
+Meta
+
+Google
+
+TikTok
+
+Klaviyo
+
+QuickBooks
+
+Xero
+
+Notifications
+
+Email
+
+Slack
+
+WhatsApp
+
+18. DATABASE MODELS
+Users
+id
+shop_id
+email
+role
+created_at
+Shops
+id
+shopify_domain
+plan
+currency
+timezone
+Products
+id
+shopify_product_id
+title
+cost
+price
+margin
+Orders
+id
+shopify_order_id
+revenue
+profit
+shipping_cost
+Customers
+id
+shopify_customer_id
+ltv
+profit
+AI Insights
+id
+shop_id
+type
+title
+description
+impact
+confidence
+status
+19. AI ENGINE
+Insight Generation Pipeline
+
+Run daily.
+
+Steps:
+
+Fetch store data
+Calculate metrics
+Detect anomalies
+Generate recommendations
+Save insights
+Notify merchant
+Insight Types
+
+Pricing
+
+Inventory
+
+Refunds
+
+Marketing
+
+Customers
+
+Shipping
+
+Growth
+
+20. BACKGROUND JOBS
+Hourly
+
+Sync orders
+
+Sync products
+
+Sync customers
+
+Daily
+
+Generate AI insights
+
+Calculate profitability
+
+Update forecasts
+
+Generate reports
+
+Weekly
+
+Generate executive report
+
+Generate growth opportunities
+
+21. BILLING
+Free
+30 days data
+
+5 AI insights/month
+Growth
+Unlimited insights
+
+Inventory forecasting
+
+Reports
+
+Price:
+
+$29/month
+Pro
+AI Chat
+
+Marketing analytics
+
+Customer intelligence
+
+Price:
+
+$79/month
+Scale
+AI Agent
+
+Advanced forecasting
+
+Team access
+
+Price:
+
+$199/month
+22. MVP SCOPE
+
+Must Build
+
+✅ Shopify OAuth
+
+✅ Dashboard
+
+✅ Products
+
+✅ Orders
+
+✅ Reports
+
+✅ AI Insights
+
+✅ Billing
+
+Do Not Build Initially
+
+❌ Team permissions
+
+❌ WhatsApp integration
+
+❌ Advanced forecasting
+
+❌ Multi-store support
+
+❌ AI agents
+
+Success Metric
+
+A merchant should install the app and within 60 seconds receive at least 3 actionable recommendations that could increase profit.
